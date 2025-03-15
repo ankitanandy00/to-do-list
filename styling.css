@@ -1,0 +1,139 @@
+body {
+    height: 100vh;
+    background-image: url('bg-3.png'); /* Ensure the correct path */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(1px); /* Apply blur effect */
+    z-index: -1; /* Keeps it behind the content */
+}
+
+#add-task-container{
+    width:350px;
+    padding:20px 10px;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 0 3px;
+    margin-bottom:20px;
+    margin-left: 60px;
+
+    display:flex;
+}
+
+input{
+    flex:5;
+    margin-right:10px;
+    border-radius:10px;
+    font-size:1.2rem;
+    padding:5px;
+}
+
+#add-task {
+
+    flex:1;
+    transition:.3s;
+
+    font-size:1.1rem;
+    padding:5px;
+    background-color: #fff;
+    color:rgb(250, 133, 112);
+
+     border:rgb(250,133,112) solid 2px;
+     border-radius: 10px;
+    
+
+}
+
+#add-task:hover {
+    background-color:rgb(250, 133, 112) ;
+    color:#fff;
+}
+
+/* STYLING FOR TASK WHICH GET ADDED TO DO LIST*/
+
+.task {
+    width: 345px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 10px; /* Adds space between task elements */
+    margin-left: 60px;
+}
+
+.task li {
+    list-style: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.task-button {
+    flex: 1;
+    border-radius: 10px; /* Ensures rounded corners */
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    font-size: small;
+    border: solid 2px transparent; /* Default border to maintain shape */
+    transition: 0.3s;
+}
+
+/* Check Task Button */
+.checkTask {
+    color: green;
+    margin-right: 5px;
+    border: solid 2px green;
+    font-size: 1.7rem;
+    border-radius: 10px; /* Ensures rounded buttons */
+    
+    
+}
+
+.checkTask:hover {
+    background-color: green;
+    color: #fff;
+}
+
+/* Delete Task Button */
+.deleteTask {
+    color: red;
+    margin-right: 5px;
+    border: solid 2px red;
+    font-size: 1.7rem;
+    border-radius: 10px; /* Ensuring border-radius is applied */
+}
+
+.deleteTask:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.caption {
+    margin-top:50%;/* Pushes it to the bottom */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    font-style: italic;
+    font-weight: bold;
+}
+
